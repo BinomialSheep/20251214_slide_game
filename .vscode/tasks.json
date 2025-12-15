@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C/C++: g++-9 compile file",
+            "type": "shell",
+            "command": "/usr/bin/g++-9",
+            "args": [
+                "-std=gnu++17",
+                "-I/home/ilu/Competitive/Competitive",
+                "-DLOCAL",
+                "-I",
+                "/home/ilu/Competitive/Competitive/ac-library/",
+                "-Wall",
+                "-Wextra",
+                "-Wshadow",
+                "-Wconversion",
+                "-Wfloat-equal",
+                "-ftrapv",
+                "-fstack-protector-all",
+                "-fsanitize=address,undefined",
+                "-Wno-unknown-pragmas",
+                "-ggdb",
+                "${file}"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": { 
+                "kind":"build",
+                "isDefault": true 
+            }
+        }
+    ]
+}
